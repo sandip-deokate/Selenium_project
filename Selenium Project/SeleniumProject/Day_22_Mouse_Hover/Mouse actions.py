@@ -45,3 +45,5 @@ print("intial location", ele.location)
 act.drag_and_drop_by_offset(ele, 2, 0).perform()
 print("final location", ele.location)
 time.sleep(10)
+
+time.sleep(20)
