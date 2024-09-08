@@ -17,7 +17,7 @@ act = ActionChains(driver)
 ele1= driver.find_element(By.XPATH,"//a[normalize-space()='AngularJS Protractor Practice Site']")
 act.move_to_element(ele).move_to_element(ele1).click().perform()
 time.sleep(2)"""
-
+time.sleep(3)
 """driver.get("https://the-internet.herokuapp.com/context_menu")
 driver.maximize_window()
 act =ActionChains(driver)
