@@ -38,15 +38,16 @@ time.sleep(10)
 """
 
 #Slider
-driver.get("https://the-internet.herokuapp.com/horizontal_slider")
+"""driver.get("https://the-internet.herokuapp.com/horizontal_slider")
 ele = driver.find_element(By.XPATH, "//input[@type='range']")
 print("intial location", ele.location)
 
 act.drag_and_drop_by_offset(ele, 2, 0).perform()
 print("final location", ele.location)
-time.sleep(10)
+time.sleep(10)"""
 
-time.sleep(20)
 
-time.sleep(30)
+
+
+
 
