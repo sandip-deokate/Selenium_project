@@ -7,7 +7,7 @@ select_query = "select * from customer limit 5"
 con=mysql.connector.connect(host="127.0.0.1", port=3306, user="root",passwd="Sandip@007",database="emp")
 curs = con.cursor()
 curs.execute(select_query)
-for row in curs:
+for row in curs: # looping
     print(row)
 #con.commit()
 con.close()
