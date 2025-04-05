@@ -34,4 +34,3 @@ windowIds = driver.window_handles
 for window in windowIds:
     driver.switch_to.window(window)
     print(driver.title)
-    

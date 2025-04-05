@@ -5,8 +5,9 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager(driver_version="128.0.6613.120").install()))
+driver = webdriver.Chrome(service=Service(ChromeDriverManager(driver_version="").install()))
 act = ActionChains(driver)
 
 """driver.get("https://www.globalsqa.com/samplepagetest/")
@@ -29,13 +30,14 @@ print("Code successfully excuted")"""
 
 #Drag and grop
 
-"""act =ActionChains(driver)
+act =ActionChains(driver)
 driver.get("https://the-internet.herokuapp.com/drag_and_drop")
-ele3= driver.find_element(By.ID,"column-b")
-ele2= driver.find_element(By.ID,"column-a")
-act.drag_and_drop(ele2,ele3).perform()
+
+source_elemet= driver.find_element(By.ID,"column-a")
+target_element= driver.find_element(By.ID,"column-b")
+act.drag_and_drop(source_elemet,target_element).perform()
 time.sleep(10)
-"""
+
 
 #Slider
 """driver.get("https://the-internet.herokuapp.com/horizontal_slider")
@@ -46,6 +48,8 @@ act.drag_and_drop_by_offset(ele, 2, 0).perform()
 print("final location", ele.location)
 time.sleep(10)"""
 
+
+#act.key_down(Keys.SHIFT).send_keys("hello").key_down(Keys.SHIFT).perform()
 
 
 

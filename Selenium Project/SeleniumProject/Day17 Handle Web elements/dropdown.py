@@ -5,11 +5,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
+#from selenium.webdriver.support.ui import Select
+
 import time
 driver = webdriver.Chrome(service=Service(ChromeDriverManager(driver_version="").install()))
 
 driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F")
-drop=Select(driver.find_element(By.XPATH,"//select[@name='DateOfBirthDay']"))
+drop=Select(driver.find_element(By.XPATH,"//select[@name='customerCurrency']"))
 """drop.select_by_visible_text("1")
 time.sleep(4)
 drop.select_by_index(2)
@@ -21,6 +23,9 @@ allele= drop.options
 print(len(allele))
 for ele in allele:
     print(ele.text)
+drop.select_by_index(1)
+time.sleep(5)
+driver.quit()
 
 
 
